@@ -10,6 +10,9 @@ void TGraph::init(int v)
     adj = new std::vector<int>[V];
 }
 
+int TGraph::getE(){ return E;}
+int TGraph::getV(){ return V;}
+
 TGraph::TGraph(int v)
 {
     init(v);
@@ -41,6 +44,9 @@ TGraph::TGraph(std::string filename)
 void TGraph::addEdge(int v, int w){    
     adj[v].push_back(w);
     adj[w].push_back(v);
+}
+const std::vector<int>& TGraph::getAdj(int v){
+    return adj[v];
 }
 
 void TGraph::to_string()

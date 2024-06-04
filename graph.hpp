@@ -9,10 +9,14 @@ public:
     TGraph(std::string filename);
     void to_string();
     void addEdge(int v, int w);
+    int getV();
+    int getE();
+    const std::vector<int>& getAdj(int v);
+
 
 private:
-void init(int v);
-    int V; // number of vertices
-    int E; // number of edges
+int V; // number of vertices
+    int E; // number of edges    
+void init(int v);    
     std::vector<int> *adj;
 };
