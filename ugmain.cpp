@@ -4,27 +4,8 @@
 
 int main(int argc, char *argv[])
 {
-    TGraph ug{"../tinyg1.txt"};
+    TGraph ug{"../tinyg2.txt"};
     ug.to_string();
-
-    int checkv=0;
-    std::cout << "vertex " << checkv << " has adj ";
-    auto adj = ug.getAdj(checkv);
-    for (const int &i : adj)
-    {
-        std::cout << i << " ";
-    }
-    std::cout << std::endl;
-
-    checkv=6;
-    std::cout << "vertex " << checkv << " has adj ";
-    adj = ug.getAdj(checkv);
-    for (const int &i : adj)
-    {
-        std::cout << i << " ";
-    }
-    std::cout << std::endl;
-
 
 
     TDepthFirstSearch search{ug, 0};
@@ -41,5 +22,7 @@ int main(int argc, char *argv[])
 
     if (search.getCount()!=ug.getV()) {
         std::cout<<"NOT"<<std::endl;        
+    } else {
+        std::cout<<"TRUE"<<std::endl;        
     }
 }

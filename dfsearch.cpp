@@ -4,12 +4,12 @@
 TDepthFirstSearch::TDepthFirstSearch( TGraph g, int s) {
     marked= new bool[g.getV()];
     for (int i=0; i<g.getV(); i++) marked[i]=false;
-    dfs(g,s);
+    dfs(g,s);    
 }
 
 void TDepthFirstSearch::dfs(TGraph g, int v)
 {
-    marked[v]=true; std::cout<< "dfs v= " <<v<< std::endl;
+    marked[v]=true; 
     count++;
     for (const int& w: g.getAdj(v)) {
         if (!marked[w]) dfs(g,w);
