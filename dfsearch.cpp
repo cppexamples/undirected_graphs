@@ -1,16 +1,24 @@
 #include "dfsearch.hpp"
+#include <iostream>
 
 TDepthFirstSearch::TDepthFirstSearch( TGraph g, int s) {
     marked= new bool[g.getV()];
-    dfs(G,s);
+    for (int i=0; i<g.getV(); i++) marked[i]=false;
+    dfs(g,s);
 }
 
-TDepthFirstSearch::dfs(TGraph g, int v)
+void TDepthFirstSearch::dfs(TGraph g, int v)
 {
-    marked[v]=true;
+    marked[v]=true; std::cout<< "dfs v= " <<v<< std::endl;
     count++;
     for (const int& w: g.getAdj(v)) {
-        if (!marked[w]) dfs(G,W)
+        if (!marked[w]) dfs(g,w);
     }
-
 }
+
+bool TDepthFirstSearch::getMarked(int w){
+    return marked[w];
+}
+int TDepthFirstSearch::getCount(){
+    return count;
+};
