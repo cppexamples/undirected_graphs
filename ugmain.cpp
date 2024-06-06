@@ -1,7 +1,7 @@
 #include <iostream>
-#include "graph.hpp"
-#include "dfsearch.hpp"
-#include "dfpaths.hpp"
+#include "graph/graph.hpp"
+#include "dfs/dfsearch.hpp"
+#include "dfp/dfpaths.hpp"
 
 int main(int argc, char *argv[])
 {

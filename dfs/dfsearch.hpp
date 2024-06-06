@@ -1,5 +1,5 @@
 #pragma once
-#include "graph.hpp"
+#include "../graph/graph.hpp"
 
 class TDepthFirstSearch
 {

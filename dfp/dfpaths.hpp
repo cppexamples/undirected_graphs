@@ -1,5 +1,5 @@
 #pragma once
-#include "graph.hpp"
+#include "../graph/graph.hpp"
 #include <vector>
 
 class TDepthFirstPaths{
