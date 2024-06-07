@@ -10,7 +10,7 @@ class TDepthFirstPaths{
 
     private:
     bool *marked;
-    int * edgeTo;
+    int *edgeTo;
     const int s;
     void dfs(TGraph g, int v);
 };
