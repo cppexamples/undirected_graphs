@@ -53,3 +53,15 @@ TSymbolGraph::TSymbolGraph(std::string filename, std::string delimeter)
         }
     }
 }
+
+std::string TSymbolGraph::getName(int v){
+    return keys[v];
+}
+
+int TSymbolGraph::getIndex(std::string s){
+    return st.at(s);
+}
+
+TGraph TSymbolGraph::getGraph(){
+    return G;
+}

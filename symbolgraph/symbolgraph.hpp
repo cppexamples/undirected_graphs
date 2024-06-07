@@ -8,6 +8,7 @@ class TSymbolGraph{
     TSymbolGraph(std::string filename, std::string delimeter);
     bool contains(std::string key);
     int getIndex(std::string  key);
+    std::string getName(int v);
     TGraph getGraph();
     private:
     std::map<std::string,int> st;
